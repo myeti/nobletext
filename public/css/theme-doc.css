@@ -1,0 +1,91 @@
+.doc {
+    padding: 40px;
+    font-weight: 300;
+    font-size: 18px;
+    color: #666;
+}
+
+.doc h1,
+.doc h2,
+.doc h3,
+.doc h4,
+.doc h5,
+.doc h6 {
+    font-weight: 300;
+    color: #555;
+}
+
+.doc h1 {
+    font-size: 48px;
+    margin: 38px 0;
+    color: #FF6C60;
+    text-align: center;
+}
+.doc  h2 {
+    font-size: 36px;
+    margin-left: 60px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.doc  h3 {
+    font-size: 30px;
+    margin-left: 160px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.doc  h4 {
+    font-size: 24px;
+    margin-left: 260px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.doc  b,
+.doc  strong {
+    font-weight: 400;
+    color: #444;
+}
+.doc  a {
+    color: #BBB;
+    text-decoration: none;
+    border-bottom: 1px dotted #BBB;
+    padding-bottom: 2px;
+}
+.doc  a:hover {
+    color: #FF6C60;
+    border-color: #FF6C60;
+}
+.doc  img {
+    max-width: 100%;
+    height: auto;
+}
+.doc  p,
+.doc  blockquote {
+    letter-spacing: 0.6px;
+    line-height: 26px;
+    margin: 24px auto;
+}
+.doc  blockquote {
+    position: relative;
+    margin: 40px 60px;
+    color: #AAA;
+    font-style: italic;
+}
+.doc  blockquote::before,
+.doc  blockquote::after {
+    position: absolute;
+    font-size: 100px;
+    font-weight: 200;
+    color: #DDD;
+    font-style: normal;
+    content: "“";
+}
+.doc blockquote::before {
+    content: "“";
+    top: 20px;
+    left: -50px;
+}
+.doc blockquote::after {
+    content: "„";
+    bottom: 30px;
+    right: -50px;
+}
