@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
 
     setInterval(function(){
-        save();
+        save_button.click();
     }, 10000);
 
 });

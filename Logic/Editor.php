@@ -4,6 +4,7 @@ namespace My\Logic;
 
 use Craft\Box\Mog;
 use Craft\Storage\File;
+use Craft\Web\Event\NotFound;
 use My\Model\Note;
 
 /**
@@ -90,6 +91,47 @@ class Editor
     {
         Note::drop($id);
         go('/');
+    }
+
+
+    /**
+     * Preview note
+     * @auth 0
+     * @render views/editor.preview
+     * @param string $id
+     * @return array
+     */
+    public function preview($id)
+    {
+        // get note
+        $note = Note::one($id);
+
+        // no note
+        if(!$note) {
+
+            // get default content
+            $content = File::read(
+                Mog::path('/views/note/unknown.html')
+            );
+
+            // get note
+            $note = new Note();
+            $note->content = $content;
+        }
+
+        return compact('note');
+    }
+
+
+    /**
+     * 404 not found
+     * @auth 0
+     * @render views/editor.preview
+     * @return array
+     */
+    public function lost()
+    {
+        return $this->preview(null);
     }
 
 } 

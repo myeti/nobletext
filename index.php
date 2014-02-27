@@ -22,11 +22,12 @@ $app = Craft\Web\App::forge([
     '/new'          => 'My\Logic\Editor::create',
     '/write/:id'    => 'My\Logic\Editor::write',
     '/delete/:id'   => 'My\Logic\Editor::delete',
+    '/view/:id'     => 'My\Logic\Editor::preview',
 
     '/login'        => 'My\Logic\Front::login',
     '/logout'       => 'My\Logic\Front::logout',
 
-    '/404'         => 'My\Logic\Error::lost',
+    '/404'          => 'My\Logic\Editor::lost',
 
 ]);
 
