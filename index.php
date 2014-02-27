@@ -22,7 +22,7 @@ $app = Craft\Web\App::forge([
     '/new'          => 'My\Logic\Editor::create',
     '/write/:id'    => 'My\Logic\Editor::write',
     '/delete/:id'   => 'My\Logic\Editor::delete',
-    '/view/:id'     => 'My\Logic\Editor::preview',
+    '/read/:id'     => 'My\Logic\Editor::read',
 
     '/login'        => 'My\Logic\Front::login',
     '/logout'       => 'My\Logic\Front::logout',

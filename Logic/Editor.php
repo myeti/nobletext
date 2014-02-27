@@ -101,7 +101,7 @@ class Editor
      * @param string $id
      * @return array
      */
-    public function preview($id)
+    public function read($id)
     {
         // get note
         $note = Note::one($id);
