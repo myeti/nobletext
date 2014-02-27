@@ -100,9 +100,7 @@ if (typeof module === 'object') {
             forcePlainText: true,
             placeholder: 'Type your text',
             secondHeader: 'h4',
-            targetBlank: false,
-            thirdHeader: 'h5',
-            fourthHeader: 'h6'
+            targetBlank: false
         },
 
         init: function (elements, options) {
@@ -237,7 +235,6 @@ if (typeof module === 'object') {
                     'header1': '<li><button class="medium-editor-action medium-editor-action-header1" data-action="append-' + this.options.firstHeader + '" data-element="' + this.options.firstHeader + '">' + buttonLabels.header1 + '</button></li>',
                     'header2': '<li><button class="medium-editor-action medium-editor-action-header2" data-action="append-' + this.options.secondHeader + '" data-element="' + this.options.secondHeader + '">' + buttonLabels.header2 + '</button></li>',
                     'header3': '<li><button class="medium-editor-action medium-editor-action-header3" data-action="append-' + this.options.thirdHeader + '" data-element="' + this.options.thirdHeader + '">' + buttonLabels.header3 + '</button></li>',
-                    'header4': '<li><button class="medium-editor-action medium-editor-action-header4" data-action="append-' + this.options.fourthHeader + '" data-element="' + this.options.fourthHeader + '">' + buttonLabels.header4 + '</button></li>',
                     'quote': '<li><button class="medium-editor-action medium-editor-action-quote" data-action="append-blockquote" data-element="blockquote">' + buttonLabels.quote + '</button></li>',
                     'orderedlist': '<li><button class="medium-editor-action medium-editor-action-orderedlist" data-action="insertorderedlist" data-element="ol">' + buttonLabels.orderedlist + '</button></li>',
                     'unorderedlist': '<li><button class="medium-editor-action medium-editor-action-unorderedlist" data-action="insertunorderedlist" data-element="ul">' + buttonLabels.unorderedlist + '</button></li>',
@@ -261,7 +258,6 @@ if (typeof module === 'object') {
                     'header1': '<b>H1</b>',
                     'header2': '<b>H2</b>',
                     'header3': '<b>H3</b>',
-                    'header4': '<b>H4</b>',
                     'quote': '<b>&ldquo;</b>',
                     'orderedlist': '<b>1.</b>',
                     'unorderedlist': '<b>&bull;</b>',

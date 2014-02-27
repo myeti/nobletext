@@ -11,7 +11,6 @@ $(document).ready(function(){
         firstHeader: 'h1',
         secondHeader: 'h2',
         thirdHeader: 'h3',
-        fourthHeader: 'h4',
         targetBlank: true,
         placeholder: 'What\'s on your mind today ? :)'
     });
