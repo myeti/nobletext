@@ -45,7 +45,7 @@
             <i class="fa fa-cloud-upload unactive"></i>
             <i class="fa fa-check-circle-o active"></i> <span>SAVE</span>
         </a>
-        <a href="<?= url('/view', $note->id) ?>" target="_blank">
+        <a href="<?= url('/read', $note->id) ?>" target="_blank">
             <i class="fa fa-file-text"></i> <span>PREVIEW</span>
         </a>
 
