@@ -3,7 +3,7 @@
 <div class="form login-form">
     <form action="<?= url('/login') ?>" method="post">
 
-        <header>NOBLE<strong>TEXT</strong></header>
+        <header>NOBLE <strong>TEXT</strong></header>
 
         <div class="line">
             <input type="text" name="username" placeholder="username" />

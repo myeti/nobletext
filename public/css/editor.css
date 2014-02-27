@@ -24,6 +24,12 @@ p {
 }
 
 /* Layout */
+body #flash {
+    position: fixed;
+    top: 10px;
+    right: 26px;
+    z-index: 20;
+}
 body #panel {
     position: fixed;
     top: 0;
@@ -56,23 +62,18 @@ body #editor {
 }
 
 
-/* Panel */
-#panel {
-
-}
-
-
 /* Nav */
 #panel nav {
-    background: #2D353F;
+    background: #35424B;
     color: #EEE;
 }
 #panel nav header {
-    padding: 17px 20px;
-    font-size: 24px;
+    padding: 18px 0;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    border-bottom: 1px solid #3f434d;
+    text-align: center;
+    /*background: #2D383E;*/
 }
 #panel nav header strong {
     font-weight: inherit;
@@ -80,7 +81,7 @@ body #editor {
 }
 #panel nav  ul {
     position: absolute;
-    top: 64px;
+    top: 60px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -90,17 +91,19 @@ body #editor {
     list-style: none;
 }
 #panel nav  ul li {
-    padding: 20px;
-    border-bottom: 1px solid #3f434d;
+    padding: 20px 30px;
     font-size: 16px;
+    font-weight: 300;
     color: #BAC4CE;
 }
 #panel nav  ul li aside {
     font-size: 12px;
     color: #76808a;
 }
+#panel nav  ul li.active,
 #panel nav  ul li:hover {
     color: #EEE;
+    background: #2D383E;
     cursor: pointer;
 }
 
@@ -109,14 +112,15 @@ body #editor {
 #panel menu {
     padding: 0;
     margin: 0;
-    background: #EEE;
+    background: #F6F6F6;
 }
 #panel menu a {
     display: block;
+    height: 60px;
     padding: 12px 0;
     text-align: center;
     color: #CCC;
-    font-size: 24px;
+    font-size: 21px;
     outline: none;
     border: 4px solid transparent;
 }
@@ -124,8 +128,21 @@ body #editor {
     display: none;
 }
 #panel menu a:hover {
-    background: #44535f;
-    color: #EEE;
+    background: #E9E9E9;
+    color: #44535f;
+}
+
+/* Save button */
+#panel menu a.save .active {
+    margin-top: 4px;
+    color: #44535f;
+    display: none;
+}
+#panel menu a.save.active .unactive {
+    display: none;
+}
+#panel menu a.save.active .active {
+    display: block;
 }
 
 
@@ -151,9 +168,8 @@ body #editor {
 #panel.active {
     left: 0;
 }
-#panel.active a[data-toggle-panel] {
-    background: #2D353F;
-    color: #EEE;
+#panel.active a[data-toggle-panel]:not(:hover) {
+    color: #44535f;
 }
 #panel.active + #editor {
     left: 320px;

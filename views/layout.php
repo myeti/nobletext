@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Your App</title>
+    <title>NOBLE TEXT</title>
     <?= self::meta(); ?>
     <?= self::css('public/css/layout', 'public/css/login'); ?>
 </head>

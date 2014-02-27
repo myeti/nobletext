@@ -24,4 +24,55 @@ $(document).ready(function(){
         panel.toggleClass('active');
     });
 
+
+    /**
+     * Save
+     */
+    var save_button = $('a.save');
+    var saving = false;
+    function save()
+    {
+        // start
+        if(saving) {
+            return;
+        }
+        saving = true;
+
+        // get data
+        var content = $('#editor .editable').html();
+        var url = $('a.save').attr('href');
+
+        // do query
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: {content: content},
+            contentType: 'application/x-www-form-urlencoded'
+        }).done(function(){
+
+            // flash
+            $('a.save').addClass('active');
+            setTimeout(function(){
+                $('a.save').removeClass('active')
+            }, 2000);
+
+            // end
+            saving = false;
+        });
+    }
+
+
+    /**
+     * Manual and Auto save
+     */
+    save_button.on('click', function(e){
+        save();
+        e.preventDefault();
+        return false;
+    });
+
+    setInterval(function(){
+        save();
+    }, 10000);
+
 });
